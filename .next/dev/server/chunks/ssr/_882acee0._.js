@@ -122,7 +122,7 @@ function Header({ showFavoritesOnly, onToggleFavorites, searchTerm, onSearchChan
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "text-2xl font-bold text-red-600",
                 children: [
-                    "Poké",
+                    "Poke",
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-blue-600",
                         children: "Deck"
@@ -150,7 +150,7 @@ function Header({ showFavoritesOnly, onToggleFavorites, searchTerm, onSearchChan
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                            placeholder: "Search Pokémon...",
+                            placeholder: "Search Pokemon...",
                             value: searchTerm,
                             onChange: (e)=>onSearchChange(e.target.value),
                             className: "pl-9"
@@ -463,32 +463,51 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/star.js [app-ssr] (ecmascript) <export default as Star>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-left.js [app-ssr] (ecmascript) <export default as ChevronLeft>");
 "use client";
 ;
 ;
 ;
-function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
+function PokemonDetails({ pokemon, isFavorite, onToggleFavorite, onBack }) {
     if (!pokemon) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "hidden md:flex w-[65%] flex-col items-center justify-center bg-slate-50 dark:bg-slate-950 text-slate-500",
+            className: "hidden md:flex w-full flex-col items-center justify-center bg-slate-50 dark:bg-slate-950 text-slate-500",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 children: "Select a Pokémon to view details"
             }, void 0, false, {
                 fileName: "[project]/components/pokemon-details.tsx",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/pokemon-details.tsx",
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 7
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "hidden md:flex w-[65%] overflow-y-auto bg-slate-50 dark:bg-slate-950",
+        className: "w-full overflow-y-auto bg-slate-50 dark:bg-slate-950",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "w-full p-8 space-y-6",
             children: [
+                onBack && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: onBack,
+                    className: "md:hidden flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 mb-4",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
+                            className: "w-5 h-5"
+                        }, void 0, false, {
+                            fileName: "[project]/components/pokemon-details.tsx",
+                            lineNumber: 31,
+                            columnNumber: 13
+                        }, this),
+                        "Back to List"
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/pokemon-details.tsx",
+                    lineNumber: 27,
+                    columnNumber: 11
+                }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex flex-col items-center gap-4",
                     children: [
@@ -498,7 +517,7 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                             className: "w-32 h-32"
                         }, void 0, false, {
                             fileName: "[project]/components/pokemon-details.tsx",
-                            lineNumber: 27,
+                            lineNumber: 38,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -506,7 +525,7 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                             children: pokemon.name
                         }, void 0, false, {
                             fileName: "[project]/components/pokemon-details.tsx",
-                            lineNumber: 32,
+                            lineNumber: 43,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -517,13 +536,13 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/pokemon-details.tsx",
-                            lineNumber: 33,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/pokemon-details.tsx",
-                    lineNumber: 26,
+                    lineNumber: 37,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -539,19 +558,19 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                                 fill: isFavorite ? "currentColor" : "none"
                             }, void 0, false, {
                                 fileName: "[project]/components/pokemon-details.tsx",
-                                lineNumber: 44,
+                                lineNumber: 55,
                                 columnNumber: 13
                             }, this),
                             isFavorite ? "Remove Favorite" : "Add to Favorites"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/pokemon-details.tsx",
-                        lineNumber: 38,
+                        lineNumber: 49,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/pokemon-details.tsx",
-                    lineNumber: 37,
+                    lineNumber: 48,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -561,7 +580,7 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                             children: "Type"
                         }, void 0, false, {
                             fileName: "[project]/components/pokemon-details.tsx",
-                            lineNumber: 51,
+                            lineNumber: 62,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -571,18 +590,18 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                                     children: type
                                 }, type, false, {
                                     fileName: "[project]/components/pokemon-details.tsx",
-                                    lineNumber: 54,
+                                    lineNumber: 65,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/pokemon-details.tsx",
-                            lineNumber: 52,
+                            lineNumber: 63,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/pokemon-details.tsx",
-                    lineNumber: 50,
+                    lineNumber: 61,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -592,7 +611,7 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                             children: "Abilities"
                         }, void 0, false, {
                             fileName: "[project]/components/pokemon-details.tsx",
-                            lineNumber: 66,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -605,25 +624,25 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                                     ]
                                 }, ability, true, {
                                     fileName: "[project]/components/pokemon-details.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 81,
                                     columnNumber: 17
                                 }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-slate-500",
                                 children: "No known abilities"
                             }, void 0, false, {
                                 fileName: "[project]/components/pokemon-details.tsx",
-                                lineNumber: 75,
+                                lineNumber: 86,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/pokemon-details.tsx",
-                            lineNumber: 67,
+                            lineNumber: 78,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/pokemon-details.tsx",
-                    lineNumber: 65,
+                    lineNumber: 76,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -633,7 +652,7 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                             children: "Evolution Chain"
                         }, void 0, false, {
                             fileName: "[project]/components/pokemon-details.tsx",
-                            lineNumber: 82,
+                            lineNumber: 93,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -643,36 +662,36 @@ function PokemonDetails({ pokemon, isFavorite, onToggleFavorite }) {
                                     children: evolution
                                 }, evolution, false, {
                                     fileName: "[project]/components/pokemon-details.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 97,
                                     columnNumber: 17
                                 }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-slate-500",
                                 children: "No evolution information"
                             }, void 0, false, {
                                 fileName: "[project]/components/pokemon-details.tsx",
-                                lineNumber: 94,
+                                lineNumber: 105,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/pokemon-details.tsx",
-                            lineNumber: 83,
+                            lineNumber: 94,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/pokemon-details.tsx",
-                    lineNumber: 81,
+                    lineNumber: 92,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/pokemon-details.tsx",
-            lineNumber: 24,
+            lineNumber: 25,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/pokemon-details.tsx",
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 }
@@ -708,7 +727,7 @@ __turbopack_context__.s([
     "pokemonApi",
     ()=>pokemonApi
 ]);
-const API_BASE_URL = ("TURBOPACK compile-time value", "http://localhost:3000") || "http://localhost:3000/api";
+const API_BASE_URL = ("TURBOPACK compile-time value", "https://pokemonaz.onrender.com") || "http://localhost:3000/api";
 const pokemonApi = {
     // Get all first 150 Pokemon
     async getAllPokemon () {
@@ -895,26 +914,41 @@ function Home() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex h-[calc(100vh-80px)]",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$pokemon$2d$list$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PokemonList"], {
-                        pokemon: filteredPokemon,
-                        selectedPokemon: selectedPokemon,
-                        favorites: favorites,
-                        loading: loading,
-                        error: error,
-                        onSelectPokemon: handleSelectPokemon,
-                        onToggleFavorite: handleToggleFavorite
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: `${selectedPokemon ? "hidden md:flex md:w-[35%]" : "w-full md:w-[35%]"}`,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$pokemon$2d$list$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PokemonList"], {
+                            pokemon: filteredPokemon,
+                            selectedPokemon: selectedPokemon,
+                            favorites: favorites,
+                            loading: loading,
+                            error: error,
+                            onSelectPokemon: handleSelectPokemon,
+                            onToggleFavorite: handleToggleFavorite
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.tsx",
+                            lineNumber: 88,
+                            columnNumber: 11
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
                         lineNumber: 87,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$pokemon$2d$details$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PokemonDetails"], {
-                        pokemon: selectedPokemon,
-                        isFavorite: selectedPokemon ? favorites.includes(selectedPokemon.id) : false,
-                        onToggleFavorite: ()=>selectedPokemon && handleToggleFavorite(selectedPokemon.id)
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: `${selectedPokemon ? "w-full md:w-[65%]" : "hidden md:w-[65%]"}`,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$pokemon$2d$details$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PokemonDetails"], {
+                            pokemon: selectedPokemon,
+                            isFavorite: selectedPokemon ? favorites.includes(selectedPokemon.id) : false,
+                            onToggleFavorite: ()=>selectedPokemon && handleToggleFavorite(selectedPokemon.id),
+                            onBack: ()=>setSelectedPokemon(null)
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.tsx",
+                            lineNumber: 100,
+                            columnNumber: 11
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 97,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this)
                 ]

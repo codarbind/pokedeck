@@ -93,12 +93,12 @@ export function PokemonDetails({ pokemon, isFavorite, onToggleFavorite, onBack }
           <h2 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Evolution Chain</h2>
           <div className="flex flex-wrap gap-2">
             {pokemon.evolutionChain.length > 0 ? (
-              pokemon.evolutionChain.map((evolution) => (
+              pokemon.evolutionChain.map((evolution,index) => (
                 <span
-                  key={evolution}
+                  key={index}
                   className="px-3 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 capitalize text-sm"
                 >
-                  {evolution}
+                  {evolution.details}
                 </span>
               ))
             ) : (

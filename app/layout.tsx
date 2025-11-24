@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
@@ -8,8 +8,15 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "PokeDeck - Manage Your Pokemon",
-  description: "Browse and manage your favorite Pokemon with PokeDeck",
+  title: "PokeDeck - Explore Pokémon Evolution",
+  description:
+    "Discover Pokémon with detailed stats, evolution chains, and interactive timeline exploration. Bookmark your favorites in PokeDeck.",
+  keywords: ["Pokémon", "evolution", "database", "stats", "trading card game"],
+  openGraph: {
+    title: "PokeDeck - Pokémon Explorer",
+    description: "Browse and explore Pokémon with evolution chains and detailed statistics",
+    type: "website",
+  },
   icons: {
     icon: [
       {
@@ -26,7 +33,18 @@ export const metadata: Metadata = {
       },
     ],
     apple: "/apple-icon.png",
-  }
+  },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+  ],
 }
 
 export default function RootLayout({

@@ -1,8 +1,7 @@
-// This client provides type-safe access to all Pokemon Manager API endpoints
+import { StringDecoder } from "string_decoder"
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api"
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://1fbf2e713837.ngrok-free.app"
 
-// DTO Types - Generated from Swagger schemas
 export interface PokemonResponseDto {
   id: number
   name: string
@@ -12,6 +11,23 @@ export interface PokemonResponseDto {
 export interface PokemonListResponseDto {
   data: PokemonResponseDto[]
   total: number
+  page?: number
+  perPage?: number
+}
+
+export interface StatDto {
+  name: string
+  value: number
+}
+
+export interface EvolutionStageDto {
+  name: string
+  sprite: string
+  types: string[]
+  method: string
+  details: string
+  trigger: string
+  requirements: string
 }
 
 export interface PokemonDetailResponseDto {
@@ -20,11 +36,23 @@ export interface PokemonDetailResponseDto {
   sprite: string
   types: string[]
   abilities: string[]
-  evolutionChain: string[]
+  stats: StatDto[]
+  height: number
+  weight: number
+  evolutionChain: EvolutionStageDto[]
 }
 
-export interface PokemonDetailWrapperDto {
-  data: PokemonDetailResponseDto
+export interface EvolutionStepDto {
+  id: number
+  name: string
+  sprite: string
+  types: string[]
+  trigger: string
+  requirements: string
+}
+
+export interface EvolutionChainResponseDto {
+  chain: EvolutionStageDto[] //EvolutionStepDto[]
 }
 
 export interface Favorite {
@@ -57,11 +85,10 @@ export interface FavoriteIdsResponseDto {
   data: number[]
 }
 
-// API Client Functions
 export const pokemonApi = {
-  // Get all first 150 Pokemon
-  async getAllPokemon(): Promise<PokemonListResponseDto> {
-    const response = await fetch(`${API_BASE_URL}/pokemon`)
+  async getAllPokemon(page = 1, perPage = 12): Promise<PokemonListResponseDto> {
+    const params = new URLSearchParams({ page: page.toString(), perPage: perPage.toString() })
+    const response = await fetch(`${API_BASE_URL}/pokemon?${params}`)
     if (!response.ok) {
       const error: ErrorResponseDto = await response.json()
       throw new Error(error.message || "Failed to fetch Pokemon list")
@@ -69,7 +96,6 @@ export const pokemonApi = {
     return response.json()
   },
 
-  // Search Pokemon by name
   async searchPokemon(name?: string): Promise<PokemonListResponseDto> {
     const params = new URLSearchParams()
     if (name && name.length >= 2) {
@@ -83,8 +109,7 @@ export const pokemonApi = {
     return response.json()
   },
 
-  // Get detailed Pokemon information
-  async getPokemonById(id: number): Promise<PokemonDetailWrapperDto> {
+  async getPokemonById(id: number): Promise<{ data: PokemonDetailResponseDto }> {
     const response = await fetch(`${API_BASE_URL}/pokemon/${id}`)
     if (!response.ok) {
       const error: ErrorResponseDto = await response.json()
@@ -93,7 +118,14 @@ export const pokemonApi = {
     return response.json()
   },
 
-  // Get all favorite Pokemon
+  async getEvolutionChain(id: number): Promise<EvolutionChainResponseDto> {
+    const response = await fetch(`${API_BASE_URL}/pokemon/evolution/${id}`)
+    if (!response.ok) {
+      return { chain: [] }
+    }
+    return response.json()
+  },
+
   async getFavorites(): Promise<Favorite[]> {
     const response = await fetch(`${API_BASE_URL}/pokemon/favorites/list`)
     if (!response.ok) {
@@ -103,7 +135,6 @@ export const pokemonApi = {
     return response.json()
   },
 
-  // Get favorite Pokemon IDs for quick lookup
   async getFavoriteIds(): Promise<FavoriteIdsResponseDto> {
     const response = await fetch(`${API_BASE_URL}/pokemon/favorites/ids`)
     if (!response.ok) {
@@ -113,7 +144,6 @@ export const pokemonApi = {
     return response.json()
   },
 
-  // Add Pokemon to favorites
   async addFavorite(pokemonId: number): Promise<SuccessResponseDto> {
     const response = await fetch(`${API_BASE_URL}/pokemon/favorites`, {
       method: "POST",
@@ -127,7 +157,6 @@ export const pokemonApi = {
     return response.json()
   },
 
-  // Remove Pokemon from favorites
   async removeFavorite(pokemonId: number): Promise<void> {
     const response = await fetch(`${API_BASE_URL}/pokemon/favorites/${pokemonId}`, {
       method: "DELETE",
@@ -138,7 +167,6 @@ export const pokemonApi = {
     }
   },
 
-  // Reset all favorites
   async resetFavorites(): Promise<void> {
     const response = await fetch(`${API_BASE_URL}/pokemon/favorites/reset`, {
       method: "POST",
