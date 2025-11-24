@@ -106,3 +106,9 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:44:31.294] Browser WARN    Image with src "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:45:14.876] Browser LOG     {"isLoading":true}
+[00:45:14.876] Browser LOG     {"isLoading":true}
+[00:46:24.876] Server  LOG      ✓ Compiled in 1525ms
+[00:46:57.562] Server  LOG      ✓ Compiled in 4.1s
+[00:47:17.261] Browser LOG     {"isLoading":true}
+[00:47:17.261] Browser LOG     {"isLoading":true}

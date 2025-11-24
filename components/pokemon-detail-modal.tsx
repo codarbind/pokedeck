@@ -97,7 +97,7 @@ export function PokemonDetailModal({
               </div>
 
               {/* Navigation buttons */}
-              <div className="flex gap-4 w-full">
+              {/* <div className="flex gap-4 w-full">
                 <button
                   onClick={() => onNavigate("prev")}
                   disabled={!canNavigatePrev}
@@ -115,7 +115,7 @@ export function PokemonDetailModal({
                   <span className="hidden sm:inline">Next</span>
                   <ChevronRight size={20} />
                 </button>
-              </div>
+              </div> */}
             </div>
 
             <div className="space-y-6 overflow-y-auto max-h-96">
